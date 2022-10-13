@@ -1,8 +1,11 @@
-
-import React from 'react';
+import React from "react";
 
 //@ts-ignore
-export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function Task({
+  task: { id, title, state },
+  onArchiveTask,
+  onPinTask,
+}) {
   return (
     <div className="list-item">
       <label htmlFor="title" aria-label={title}>

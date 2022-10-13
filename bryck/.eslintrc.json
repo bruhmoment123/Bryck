@@ -1,3 +1,17 @@
 {
-  "extends": ["next/babel","next/core-web-vitals"]
+  "extends": ["next/babel", "next/core-web-vitals"],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "date-fns/locale",
+            "message": "Please, import a specific locale instead, e.g. `import enUS from 'date-fns/locale/en-US';`"
+          }
+        ],
+        "patterns": ["!date-fns/locale/*"]
+      }
+    ]
+  }
 }

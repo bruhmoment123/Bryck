@@ -1,24 +1,23 @@
+import React from "react";
 
-import React from 'react';
-
-import Task from './Task';
+import Task from "./Task";
 
 export default {
   component: Task,
-  title: 'Task',
+  title: "Task",
 };
 
 //@ts-ignore
-const Template = args => <Task {...args} />;
+const Template = (args) => <Task {...args} />;
 
 export const Default = Template.bind({});
 //@ts-ignore
 Default.args = {
-task: {
-    id: '1',
-    title: 'Test Task',
-    state: 'TASK_INBOX',
-},
+  task: {
+    id: "1",
+    title: "Test Task",
+    state: "TASK_INBOX",
+  },
 };
 
 export const Pinned = Template.bind({});
@@ -28,7 +27,7 @@ Pinned.args = {
   task: {
     //@ts-ignore
     ...Default.args.task,
-    state: 'TASK_PINNED',
+    state: "TASK_PINNED",
   },
 };
 
@@ -38,6 +37,6 @@ Archived.args = {
   task: {
     //@ts-ignore
     ...Default.args.task,
-    state: 'TASK_ARCHIVED',
+    state: "TASK_ARCHIVED",
   },
 };
