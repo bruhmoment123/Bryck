@@ -21,6 +21,6 @@
     "**/*.tsx",
     "src/components/Task.js",
     "src/components/Task.stories.js"
-  ],
+, "lib/mongodb.ts"  ],
   "exclude": ["node_modules"]
 }
